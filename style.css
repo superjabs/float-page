@@ -15,16 +15,16 @@ a {
 body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
-header {
+.header {
   text-align: center;
   border-bottom: 1px solid black;
   padding: 20px 0;
 }
 
-section::after {
+/* don't forget use clearfix when we use float */
+.content::after {
   content: "";
   clear: both;
   display: table;
@@ -56,19 +56,20 @@ section::after {
 }
 
 .items {
-  padding: 20px;
+  padding: 20px 15px;
 }
 
 .post {
   margin-top: 60px;
 }
 
-footer {
+.footer {
   text-align: center;
-  padding: 3px;
-  background-color: rgba(2, 1, 1, 0.356);
+  background-color: rgba(128, 128, 128, 0.39);
+  padding: 1px;
 }
 
+/* responsive design */
 @media screen and (max-width: 700px) {
   .left,
   .right {
